@@ -1,0 +1,420 @@
+body {
+  font-size: 14px;
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  color: #28292b;
+  background: url("");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@font-face {
+  font-family: GTSuper;
+  src: url(../fonts/031a669fbaa1dbe04f0de01b7fc0e757.woff2);
+}
+@font-face {
+  font-family: FreightSans;
+  src: url(../fonts/Freight-Sans-Medium.otf);
+}
+.video-bg {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.top-area {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: calc(100vw - 20px);
+  z-index: 40;
+}
+.top-area .logo .logo-image {
+  width: 50px;
+}
+.top-area .top-nav {
+  display: grid;
+  background: #fff;
+  align-items: center;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+}
+.top-area .top-nav .nav-list {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.top-area .top-nav .nav-list li {
+  padding: 0.7rem 0.8rem;
+  border-left: 1px solid #d4d4d4;
+  cursor: pointer;
+}
+.top-area .top-nav .nav-list li:first-child {
+  border: none;
+}
+.top-area .top-nav .nav-list li:hover {
+  background-color: #f8f9fa;
+}
+.top-area .top-nav-mini {
+  display: none;
+}
+
+.downloader-box {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 5rem;
+  z-index: 30;
+  height: 25.625rem;
+  width: 17.5rem;
+  transform: translate(5%, -50%);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.downloader-box .scrollable-content {
+  height: 21.125rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.downloader-box .scrollable-content::-webkit-scrollbar {
+  width: 5px;
+  background-color: none;
+}
+.downloader-box .scrollable-content::-webkit-scrollbar-thumb {
+  background-color: #bfbfbf;
+  border-top-right-radius: 10px;
+}
+.downloader-box .scrollable-content .content {
+  padding-top: 1.5rem;
+}
+.downloader-box .scrollable-content .content .downloader-topicon {
+  width: 35%;
+  margin: 0 auto 1rem auto;
+}
+.downloader-box .scrollable-content .content .heading-1 {
+  font-weight: 400;
+  font-family: FreightSans;
+  line-height: 1.2;
+  font-size: 1.37rem;
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.downloader-box .scrollable-content .content .duration-text {
+  color: #6a6d70;
+  font-size: 13px;
+  margin: 0;
+  text-align: center;
+}
+.downloader-box .scrollable-content .content .download-note {
+  text-align: center;
+  margin: 0;
+  padding: 11px 20px 10px;
+  font-size: 13.5px;
+  color: #5c6064;
+}
+.downloader-box .scrollable-content .content .files {
+  margin-top: 2rem;
+}
+.downloader-box .scrollable-content .content .files .file-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.downloader-box .scrollable-content .content .files .file-list .file {
+  border-top: 1px solid #dddd;
+  border-bottom: 1px solid #dddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+}
+.downloader-box
+  .scrollable-content
+  .content
+  .files
+  .file-list
+  .file
+  .file-detail {
+  width: 75%;
+}
+.downloader-box
+  .scrollable-content
+  .content
+  .files
+  .file-list
+  .file
+  .file-detail
+  p {
+  margin: 0;
+}
+.downloader-box
+  .scrollable-content
+  .content
+  .files
+  .file-list
+  .file
+  .file-detail
+  .filename {
+  font-weight: 350;
+  margin-bottom: 2px;
+  word-break: keep-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.downloader-box
+  .scrollable-content
+  .content
+  .files
+  .file-list
+  .file
+  .file-detail
+  .file-info {
+  font-size: 12px;
+  font-weight: 300;
+  color: #6a6d70;
+}
+.downloader-box
+  .scrollable-content
+  .content
+  .files
+  .file-list
+  .file
+  .file-action {
+  width: 30px;
+  background-color: white;
+  height: 100%;
+  text-align: right;
+}
+.downloader-box
+  .scrollable-content
+  .content
+  .files
+  .file-list
+  .file
+  .file-action
+  svg {
+  height: 25px;
+  fill: #409fff;
+  cursor: pointer;
+}
+.downloader-box
+  .scrollable-content
+  .content
+  .files
+  .file-list
+  .file
+  .file-action
+  svg:hover {
+  fill: #0173e5;
+}
+.downloader-box .downloader-box-footer {
+  border-top: 1px solid #d4d4d4;
+  height: 4.5rem;
+  box-shadow: 0px -1px 8px #d4d4d4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.downloader-box .downloader-box-footer .download-btn {
+  border: 1px solid #409fff;
+  background-color: #409fff;
+  color: white;
+  height: 2.5rem;
+  width: 9.75rem;
+  font-size: 16px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s cubic-bezier(0.77, 0, 0.175, 1),
+    background-color 0.2s cubic-bezier(0.77, 0, 0.175, 1),
+    color 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.downloader-box .downloader-box-footer .download-btn:hover {
+  background-color: #0173e5;
+  border: 1px solid #0173e5;
+}
+
+.iframe-bg {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  height: 50vh;
+  width: 50vw;
+  transform: translate(-50%, -10%);
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 50;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  /* Modal Content */
+}
+.modal .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  border-radius: 10px;
+}
+.modal .modal-content .login-area {
+  padding: 1rem;
+}
+.modal .modal-content .login-area form {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 1rem;
+}
+.modal .modal-content .login-area form .form-group {
+  margin-bottom: 0.2rem;
+  color: #6a6d70;
+  font-weight: 300;
+}
+.modal .modal-content .login-area form .form-group input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #babcbf;
+  padding: 0 1rem;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.modal .modal-content .login-area form .form-group input:focus {
+  border: 1px solid #409fff;
+  color: black;
+}
+.modal .modal-content .login-area form .form-group .btn {
+  background-color: #babcbf;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 100px;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+}
+.modal .modal-content .login-area form .form-group .btn:hover {
+  background-color: #0173e5;
+}
+.modal .modal-content .login-area .login-content {
+  margin-top: 15%;
+}
+.modal .modal-content .login-area .login-content h1 {
+  font-family: GTSuper;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.modal .modal-content .login-area .login-content p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+  font-family: FreightSans;
+  font-weight: 400;
+}
+
+.error-box {
+  display: none;
+  padding: 1rem;
+  margin-top: 1em;
+  color: white;
+  background-color: #5c6064;
+  border: 1px solid #f8f9fa;
+  border-radius: 10px;
+  transition: display 2s ease-in-out;
+  text-align: center;
+}
+.error-box.active {
+  display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .video-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .top-area .top-nav {
+    display: none;
+  }
+  .top-area .top-nav-mini {
+    display: block;
+  }
+
+  .downloader-box {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .login-container {
+    z-index: 100;
+  }
+  .login-container.active {
+    width: 100vw;
+  }
+  .login-container .login-area form {
+    grid-template-columns: 100%;
+  }
+  .login-container .login-area form .form-group {
+    margin-bottom: 0.2rem;
+  }
+  .login-container .login-area .login-content {
+    margin-top: 40%;
+  }
+  .login-container .login-area .login-content h1 {
+    font-size: 2.5rem;
+  }
+  .login-container .login-area .login-content p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    font-family: FreightSans;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal .modal-content {
+    width: 80%;
+  }
+}
